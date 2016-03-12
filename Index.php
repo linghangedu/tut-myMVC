@@ -8,14 +8,31 @@ if ($_GET['page'] == 'login') {
 	$controller->login();
 }
 
-if ($_GET['action'] == 'login') {
-	echo "validate";
-}
 
 if ($_GET['page'] == 'profile') {
-	$controller->profile($_GET['id']);
+	if (!isset($_GET['id'])) {
+		$controller->profile(1);
+	}
+	else {
+		$controller->profile($_GET['id']);
+	}	
 }
 
+
+if ($_GET['page'] == 'register') {
+	$controller->register();
+}
+
+
+
+if ($_GET['action'] == 'login') {
+	$controller->validate($_POST['username'], $_POST['password']);
+}
+
+
+if ($_GET['action'] == 'register') {
+	$controller->addUser($_POST);
+} 
 
 
 
