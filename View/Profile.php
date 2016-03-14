@@ -25,10 +25,13 @@
 </head>
 <body>
 <h1>User Profile</h1>
+			<!-- <?var_dump($user)?> -->
+		 <p>Username: <? echo $user['username']?></p>
+		 <p>Status: <? echo $user['first_name']?></p>	
+		 <p>Status: <? echo $user['last_name']?></p>			
+		 <p>Status: <? echo $user['status']?></p>			
+		 <p>Status: <? echo $user['email']?></p>			
 
-		 <p>User ID: <? echo $users[0]['id'] ?></p>
-		 <p>Username: <? echo $users[0]['username']?></p>
-		 <p>Status: <? echo $users[0]['status']?></p>			
 
 
 	 <a href="logout.php">Log Out</a>
